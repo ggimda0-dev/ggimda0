@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurgerKing</title>
+    <!-- 부트스트랩cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- swiper cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header id="header">
+        <div class="bk-container">
+            <div class="flex justify-content-between align-items-center">
+                <h1 class="logo"><a href="/">burger king</a></h1>
+                <nav class="gnb">
+                    <ul class="flex gnb-list">
+                        <li class="gnb-item"><a href="/">menu</a></li>
+                        <li class="gnb-item"><a href="/">story</a>
+                            <ul class="gnb-submenu flex">
+                                <li class="pd-x-1 gnb-submenu-item"><a href="/">브랜드</a></li>
+                                <li class="pd-x-1 gnb-submenu-item"><a href="/">why 버거킹</a></li>
+                                <li class="pd-x-1 gnb-submenu-item"><a href="/">esg 경영</a></li>
+                                <li class="pd-x-1 gnb-submenu-item"><a href="/">smart qsr</a></li>
+                                <li class="pd-x-1 gnb-submenu-item"><a href="/">수상실적</a></li>
+                                <li class="pd-x-1 gnb-submenu-item"><a href="/">광고영상</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item"><a href="/">news</a>
+                            <ul class="gnb-submenu flex">
+                                <li class="pd-x-1 gnb-submenu-item"><a href="/">이벤트</a></li>
+                                <li class="pd-x-1 gnb-submenu-item"><a href="/">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item"><a href="/">store</a></li>
+                        <li class="gnb-item"><a href="/">customer</a></li>
+                        <li class="gnb-item"><a href="/">가맹창업.임대문의</a>
+                            <ul class="gnb-submenu flex">
+                                <li class="pd-x-1 gnb-submenu-item"><a href="/">가맹상담 문의</a></li>
+                                <li class="pd-x-1 gnb-submenu-item"><a href="/">직영임대 제안</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="util-menu-btn gnb-util">
+                    <a href="/">채용사이트</a>
+                </div>
+                <button class="hamberger"><img src="./assets/images/ico_burger.svg" alt=""></button>
+            </div>
+        </div>
+    </header>
+    <!-- 햄버거메뉴 -->
+    <div class="m-menu">
+        <div class="m-menu-inner">
+            <ul class="m-menu-list">
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/">
+                            <div class="m-icon"><img src="./assets/images/ico_gnb_menu01.svg" alt="메뉴"></div>
+                            <span>menu</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/" class="m-menu-btn">
+                            <div class="m-icon"><img src="./assets/images/ico_gnb_menu02.svg" alt="스토리"></div>
+                            <span>story</span>
+                        </a>
+                    </div>
+                    <ul class="m-submenu">
+                        <li class="m-submenu-item"><a href="/">브랜드</a></li>
+                        <li class="m-submenu-item"><a href="/">why 버거킹</a></li>
+                        <li class="m-submenu-item"><a href="/">esg 경영</a></li>
+                        <li class="m-submenu-item"><a href="/">smart qsr</a></li>
+                        <li class="m-submenu-item"><a href="/">수상실적</a></li>
+                        <li class="m-submenu-item"><a href="/">광고영상</a></li>
+                    </ul>
+                </li>
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/" class="m-menu-btn">
+                            <div class="m-icon"><img src="./assets/images/ico_gnb_menu03.svg" alt="뉴스"></div>
+                            <span>news</span>
+                        </a>
+                    </div>
+                    <ul class="m-submenu">
+                        <li class="m-submenu-item"><a href="/">이벤트</a></li>
+                        <li class="m-submenu-item"><a href="/">공지사항</a></li>
+                    </ul>
+                </li>
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/">
+                            <div class="m-icon"><img src="./assets/images/ico_gnb_menu04.svg" alt="스토어"></div>
+                            <span>store</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/">
+                            <div class="m-icon"><img src="./assets/images/ico_gnb_menu05.svg" alt="고객센터"></div>
+                            <span>customer</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/" class="m-menu-btn">
+                            <div class="m-icon"><img src="./assets/images/ico_gnb_menu06.svg" alt="가맹창업,임대문의"></div>
+                            <span>가맹창업.임대문의</span>
+                        </a>
+                    </div>
+                    <ul class="m-submenu">
+                        <li class="m-submenu-item"><a href="/">가맹상담 문의</a></li>
+                        <li class="m-submenu-item"><a href="/">직영임대 제안</a></li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <div class="m-util-menu">
+                <div class="util-menu-btn d-inline-block mb-3"><a href="/">가맹점 창업</a></div>
+                <div class="flex align-items-center">
+                    <div class="util-menu-btn"><a href="/">채용사이트</a></div>
+                    <ul class="flex sns-list">
+                        <li><a href="/"><img src="./assets/images/ico_sns_instagram.svg" alt="인스타그램"></a></li>
+                        <li><a href="/"><img src="./assets/images/ico_sns_facebook.svg" alt="페이스북"></a></li>
+                        <li><a href="/"><img src="./assets/images/ico_sns_x.svg" alt="X 트위터"></a></li>
+                        <li><a href="/"><img src="./assets/images/ico_sns_youtube.svg" alt="유튜브"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 햄버거메뉴 -->
+    <!-- 헤더 -->
+
+    <!-- 메인 -->
+    <main id="main">
+        <section class="visual">
+            <div class="bk-container">
+                <div class="row slide-banner">
+                    <div class="col-lg-8 col-sm-12 left-column">
+                        <div class="swiper main-swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/a48b2492-c455-480a-9b89-6170a35162eb.png" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="./assets/images/a7574554-8a83-4705-9cce-23695dc9c059.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/b961bbf9-88a6-4539-84dc-f04083a0f941.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/d97f0798-0288-4da7-a19b-ab2c10b3fee7.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/ef038c35-85b0-440c-a77f-3c5a739b56d9.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/f371d0b4-6aa8-47c3-9e55-823039fe3c2e.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/fb07b32b-2913-4979-87d3-c3f646713fe4.png" alt=""></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row-card gap-16">
+                            <div class="bk-card right-1th">
+                                <a href="/">
+                                    <h2 class="bk-card-text1">버거킹 가맹점<br>창업 안내</h2>
+                                </a>
+                            </div>
+                            <div class="bk-card right-2th">
+                                <a href="/">
+                                    <h2 class="bk-card-text2">내 주변 버거킹 매장 찾기</h2>
+                                </a>
+                                <div class="search-box flex">
+                                    <form>
+                                        <input type="search" placeholder="지역, 매장명을 입력해주세요">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ad-video">
+            <div class="bk-container">
+                <div class="flex ad-title">
+                    <h3>광고 영상</h3>
+                    <a href="/">더보기</a>
+                </div>
+                <div class="p-ad-video">
+                    <div class="flex gap-16 ad-box">
+                        <div class="card-list">
+                            <div class="ad-card" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                <img src="./assets/images/fe2a461c-205f-4ce5-9f98-9d3961937924.jpg" alt="콰트로페퍼큐브스테이크와퍼">
+                            </div>
+                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <iframe class="ad-frame" src="https://www.youtube.com/embed/AbZ3NyniHSc?si=w0jjHiHhwJ1TgtNB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="ad-text">콰트로페퍼큐브스테이크와퍼</p>
+                        </div>
+                        <div class="card-list">
+                            <div class="ad-card" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                <img src="./assets/images/fb07b32b-2913-4979-87d3-c3f646713fe4.png" alt="할라피뇨 파퍼 - 1편">
+                            </div>
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <iframe class="ad-frame" src="https://www.youtube.com/embed/qOnNy_r6cw4?si=CaCimMzSkbjOdNyW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="ad-text">할라피뇨 파퍼 - 1편</p>
+                        </div>
+                        <div class="card-list">
+                            <div class="ad-card" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                <img src="./assets/images/fd342a2c-6723-4bb9-88ac-f177b1e5d413.jpg" alt="할라피뇨 파퍼 - 2편">
+                            </div>
+                            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <iframe class="ad-frame" src="https://www.youtube.com/embed/_daNh28cxeU?si=qFTaRNmQsumKAQWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="ad-text">할라피뇨 파퍼 - 2편</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-ad-video">
+                    <div class="swiper ad-swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="card-list">
+                                    <div class="ad-card" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                        <img src="./assets/images/fe2a461c-205f-4ce5-9f98-9d3961937924.jpg" alt="콰트로페퍼큐브스테이크와퍼">
+                                    </div>
+                                    <p class="ad-text">콰트로페퍼큐브스테이크와퍼</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-list">
+                                    <div class="ad-card" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                                        <img src="./assets/images/fb07b32b-2913-4979-87d3-c3f646713fe4.png" alt="할라피뇨 파퍼 - 1편">
+                                    </div>
+                                    <p class="ad-text">할라피뇨 파퍼 - 1편</p>      
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-list">
+                                    <div class="ad-card" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                                        <img src="./assets/images/fd342a2c-6723-4bb9-88ac-f177b1e5d413.jpg" alt="할라피뇨 파퍼 - 2편">
+                                    </div>
+                                    <p class="ad-text">할라피뇨 파퍼 - 2편</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- 모달 -->
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe class="ad-frame" src="https://www.youtube.com/embed/AbZ3NyniHSc?si=w0jjHiHhwJ1TgtNB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe class="ad-frame" src="https://www.youtube.com/embed/qOnNy_r6cw4?si=CaCimMzSkbjOdNyW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe class="ad-frame" src="https://www.youtube.com/embed/_daNh28cxeU?si=qFTaRNmQsumKAQWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="menu pt-5">
+            <div class="bk-container">
+                <h3>메뉴와 매장소개, Why 버거킹</h3>
+                <div class="menu-list row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="list bk-pb-1">
+                            <div class="menu-card">
+                                <div class="menu-body">
+                                    <span>매뉴소개</span>
+                                    <p>버거킹만이 드릴 수 있는 특별한 맛을 소개합니다</p>
+                                    <a href="/" class="add-btn">메뉴 둘러보기</a>
+                                </div>
+                                <div class="card-img">
+                                    <img src="./assets/images/fb8997c7-170d-484c-a48b-fc5e1abe97ba.png" alt="햄버거">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="list bk-pb-1">
+                            <div class="menu-card">
+                                <div class="menu-body">
+                                    <span>매장찾기</span>
+                                    <p>가장 맛있는 버거를 제공하는 프리미엄 QSR 브랜드 매장</p>
+                                    <a href="/" class="add-btn">가까운 매장 찾아보기</a>
+                                </div>
+                                <div class="card-img">
+                                    <img src="./assets/images/ec0239ed-d960-4609-b232-1de08b62a08d.png" alt="매장">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="list bk-pb-1">
+                            <div class="swiper menu-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="menu-card">
+                                            <div class="menu-body d-half">
+                                                <p class="menu-slide-p">버거킹의 자랑, 와퍼!<br>REAL WHOPPER</p>
+                                                <a href="/" class="add-btn">Why 버거킹</a>
+                                            </div>
+                                            <div class="card-img d-half">
+                                                <img src="./assets/images/b5686c3e-b314-4316-af98-db1fc4e422ac.png" alt="매장">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="menu-card">
+                                            <div class="menu-body d-half">
+                                                <p class="menu-slide-p">불맛에 진심인 브랜드<br>FLAMED GRILLED</p>
+                                                <a href="/" class="add-btn">Why 버거킹</a>
+                                            </div>
+                                            <div class="card-img d-half">
+                                                <img src="././assets/images/d50ad633-5b63-4adc-bef7-813f1985aa57.png" alt="매장">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="menu-card">
+                                            <div class="menu-body d-half">
+                                                <p class="menu-slide-p">신선한 원재료 사용<br>패티와 야채, 소스</p>
+                                                <a href="/" class="add-btn">Why 버거킹</a>
+                                            </div>
+                                            <div class="card-img d-half">
+                                                <img src="./assets/images/b1a0b4f8-7c9b-48bd-992c-73a795791a67.png" alt="매장">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="menu-card">
+                                            <div class="menu-body d-half">
+                                                <p class="menu-slide-p">QUALITY<br>엄격한 품질 관리 시스템</p>
+                                                <a href="/" class="add-btn">Why 버거킹</a>
+                                            </div>
+                                            <div class="card-img d-half">
+                                                <img src="./assets/images/ffe6021e-201d-49d0-9a7d-61af82f64138.png" alt="매장">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="menu-card">
+                                            <div class="menu-body d-half">
+                                                <p class="menu-slide-p">SERVICE<br>신속, 정확, 친절한 서비스</p>
+                                                <a href="/" class="add-btn">Why 버거킹</a>
+                                            </div>
+                                            <div class="card-img d-half">
+                                                <img src="./assets/images/cd1017b7-1d64-4ee6-b2be-9eb5b4c02889.png" alt="매장">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="menu-card">
+                                            <div class="menu-body d-half">
+                                                <p class="menu-slide-p">CLEANILINESS<br>철저한 위생 관리</p>
+                                                <a href="/" class="add-btn">Why 버거킹</a>
+                                            </div>
+                                            <div class="card-img d-half">
+                                                <img src="./assets/images/d9dfa872-9e37-4c76-955c-6c7bd639372b.png" alt="매장">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="menu-card">
+                                            <div class="menu-body d-half">
+                                                <p class="menu-slide-p">맛에 대한 신뢰<br>Trust in Taste</p>
+                                                <a href="/" class="add-btn">Why 버거킹</a>
+                                            </div>
+                                            <div class="card-img d-half">
+                                                <img src="./assets/images/c2a57504-636d-49b9-a7c4-5bb1dda82ac8.png" alt="매장">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ad-banner">
+            <div class="bk-container">
+                <a href="/" class="ad-b-bg">
+                    <div class="ad-delivery flex">
+                        <div class="ad-b-left">
+                            <h3>집에서 만나는 버거킹</h3>
+                            <p>딜리버리 전화주문 안내 09:00 - 19:00 / 연중무휴</p>
+                            <span>매장별로 상이할 수 있습니다.</span>
+                        </div>
+                        <div class="ad-b-right">
+                            <p>1599-0505</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="customer">
+            <div class="bk-container">
+                <h3>고객과 함께 성장하는 버거킹</h3>
+                <div class="customer-grid">
+                    <div class="list cus-card1">
+                        <div class="menu-card">
+                            <div class="menu-body">
+                                <span>브랜드</span>
+                                <p>Since 1954, 전 세계 고객에게 사랑받는 글로벌 브랜드 버거킹!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list cus-card2">
+                        <div class="menu-card">
+                            <div class="menu-body">
+                                <span>ESG 경영</span>
+                                <p>지속 가능한 사회를 위한 버거킹의 노력</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list cus-card3">
+                        <div class="menu-card">
+                            <div class="menu-body">
+                                <span>SMART QSR</span>
+                                <p>온, 오프라인에서 최상의 고객 경험을 제공하는 똑똑한 QSR</p>
+                            </div>
+                            <div class="card-img">
+                                <img src="./assets/images/burgerkingbag.png" alt="스마트qsr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list cus-card4">
+                        <div class="menu-card">
+                            <div class="menu-body">
+                                <span>수상실적</span>
+                                <p>1984년 한국 진출 이후 열심히 성장해온 버거킹 코리아!</p>
+                            </div>
+                            <div class="card-img">
+                                <img src="./assets/images/a754388d-be92-42c9-b8f5-429e1a222021.png" alt="수상실적">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="app">
+            <div class="bk-container">
+                <div class="app-bg">
+                    <div class="phone">
+                        <div>
+                            
+                        </div>
+                    </div>
+                    <div class="app-text">
+                        <p><span class="point">오직 버거킹 앱에서</span>만 가능한 <span class="point">혜택</span> 
+                        </p>
+                        <p>지금 앱 다운로드 받으시고 혜택을 누리세요!</p>
+                    </div>
+                    <ul class="flex app-list">
+                        <li>픽업오더</li>
+                        <li>딜리버리 오더</li>
+                        <li>멤버십 적립</li>
+                        <li>할인쿠폰</li>
+                    </ul>
+                    <div class="flex align-items-center">
+                        <div class="qr-img">
+                            <img src="./assets/images/qr.png" alt="qr코드">
+                        </div>
+                        <div class="app-down">
+                            <a href="/" class="google">googleplay에서 다운로드</a>
+                            <a href="/" class="appstore">appstore에서 다운로드</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 메인 -->
+
+    <!-- 푸터 -->
+    <footer id="footer">
+        <div class="footer-m-menu">
+            <ul class="m-menu-list">
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/">
+                            <span>menu</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/" class="m-menu-btn">
+                            <span>story</span>
+                        </a>
+                    </div>
+                    <ul class="m-submenu">
+                        <li class="m-submenu-item"><a href="/">브랜드</a></li>
+                        <li class="m-submenu-item"><a href="/">why 버거킹</a></li>
+                        <li class="m-submenu-item"><a href="/">esg 경영</a></li>
+                        <li class="m-submenu-item"><a href="/">smart qsr</a></li>
+                        <li class="m-submenu-item"><a href="/">수상실적</a></li>
+                        <li class="m-submenu-item"><a href="/">광고영상</a></li>
+                    </ul>
+                </li>
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/" class="m-menu-btn">
+                            <span>news</span>
+                        </a>
+                    </div>
+                    <ul class="m-submenu">
+                        <li class="m-submenu-item"><a href="/">이벤트</a></li>
+                        <li class="m-submenu-item"><a href="/">공지사항</a></li>
+                    </ul>
+                </li>
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/">
+                            <span>store</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/">
+                            <span>customer</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="m-menu-item">
+                    <div class="m-menu-top">
+                        <a href="/" class="m-menu-btn">
+                            <span>가맹창업.임대문의</span>
+                        </a>
+                    </div>
+                    <ul class="m-submenu">
+                        <li class="m-submenu-item"><a href="/">가맹상담 문의</a></li>
+                        <li class="m-submenu-item"><a href="/">직영임대 제안</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="bk-container">
+            <div class="footer-grid">
+                <ul class="flex footer-menu">
+                    <li><a href="/">이용약관</a></li>
+                    <li><a href="/">개인정보처리방침</a></li>
+                    <li><a href="/">위치정보 이용약관</a></li>
+                    <li><a href="/">법적고지</a></li>
+                    <li><a href="/">고정형 영상정보처리기기 운영관리방침</a></li>
+                    <li class="util-menu-btn"><a href="/">채용사이트</a></li>
+                </ul>
+                <div class="footer-left logo">
+                    <a href="/">BURGER KING</a>
+                </div>
+                <div class="footer-middle">
+                    <p>서울 특별시 종로구 삼봉로 71 G타워 4F,5F</p>
+                    <p>사업자등록번호:101-86-76277 <a href="/">사업자정보확인</a></p>
+                    <p>(주)비케이알 대표이사:이동형</p>
+                    <p>BKR Co.,Ltd.All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <ul class="flex sns-list">
+                        <li><a href="/"><img src="./assets/images/ico_sns_instagram.svg" alt="인스타그램"></a></li>
+                        <li><a href="/"><img src="./assets/images/ico_sns_facebook.svg" alt="페이스북"></a></li>
+                        <li><a href="/"><img src="./assets/images/ico_sns_x.svg" alt="X 트위터"></a></li>
+                        <li><a href="/"><img src="./assets/images/ico_sns_youtube.svg" alt="유튜브"></a></li>
+                        <li><a href="/"><img src="./assets/images/ico_timhortons.svg" alt="팀홀튼"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 푸터 -->
+
+    <!-- javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <!-- javascript -->
+</body>
+</html>

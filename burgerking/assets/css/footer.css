@@ -1,0 +1,109 @@
+#footer{
+    background-color: rgba(255, 253 ,253, .7);
+    padding: 3rem 0;
+}
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.4rem;
+}
+.footer-menu{
+    grid-column: 4 / 13;
+    align-items: center;
+}
+.footer-left{
+    grid-column: 1 / 4;
+}
+.footer-middle{
+    grid-column: 4 / 10;
+}
+.footer-right{
+    grid-column: 10 / 13;
+}
+.footer-menu li{
+    margin-right: 2rem;
+}
+.footer-menu li a,
+.footer-middle p,
+.footer-middle a,
+.footer-left a,
+.footer-m-menu .m-menu-list a,
+.footer-m-menu .m-submenu .m-submenu-item a{
+    color:  rgba(80, 35, 20, .5);
+}
+.footer-menu li a,
+.footer-middle p,
+.footer-middle a,
+.footer-m-menu .m-submenu .m-submenu-item a{
+    font-size: 1.2rem;
+}
+.footer-menu .util-menu-btn a{
+    color: var(--bk-light);
+}
+.footer-middle p{
+    padding-bottom: .8rem;
+}
+.footer-menu li a:hover{
+    color:  rgba(80, 35, 20, .8);
+}
+.footer-m-menu{
+    display: none;
+}
+.footer-m-menu .m-submenu{
+    background: none;
+}
+.footer-m-menu .m-menu-list a span{
+    font-size: 1.4rem;
+}
+.footer-m-menu .m-menu-top{
+    padding: 0 3rem;
+}
+.footer-m-menu .m-submenu .m-submenu-item{
+    padding: 1.6rem 4rem;
+}
+.footer-m-menu .m-menu-list .m-menu-item{
+    min-height: 7rem;
+    border-bottom: 0.75px solid rgb(217, 203, 199, 0.5);
+}
+.footer-m-menu .m-menu-list .m-menu-btn:after{
+    background: url(../images/ico_darrow01.svg) no-repeat;
+}
+@media(max-width:991px){
+    .footer-m-menu{
+        display: block;
+        padding-bottom: 3rem;
+    }
+    .footer-menu{
+        grid-column: 5 / 9;
+        grid-row: 1;
+        justify-content:center;
+    }
+    .footer-left{
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+    .footer-middle{
+        grid-column: 1 / 7;
+
+    }
+    .footer-right{
+        grid-column: 7 / 13;
+    }
+}
+@media(max-width:768px){
+    .footer-menu{
+        grid-column: 1 / 13;
+        flex-direction: column;
+        align-items:flex-start
+    }
+    .footer-menu li{
+        margin: 0 0 2rem 0;
+    }
+    .footer-middle{
+        grid-column: 1 / -1;
+
+    }
+    .footer-right{
+        grid-column: 1 / -1;
+    }
+}
