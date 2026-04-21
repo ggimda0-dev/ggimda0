@@ -47,6 +47,8 @@
     font-display: swap;
 }
 
+
+
 @font-face {
     font-family: 'Pretendard';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
@@ -61,14 +63,16 @@
     font-display: swap;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
 :root {
     --main-color:#ADEBB4;
     --font-color:#191919;
     --subfont-color:#A1A1A1;
 }
 
-* {
-    font-family: 'Pretendard', sans-serif;
+body {
+    font-family: 'Pretendard', "Noto Sans KR", sans-serif;
 }
 
 html{
@@ -96,7 +100,7 @@ span{
 .inner{
     max-width: 1400px;
     margin: 0 auto;
-    padding:0 60px;
+    padding:0 6rem;
 }
 .flex{
     display: flex;
@@ -116,7 +120,7 @@ h1{
     padding-bottom: 1rem;
 }
 .menu li{
-    margin: 0 20px;
+    margin: 0 2rem;
 }
 .menu li a{
     color: var(--subfont-color);
@@ -223,6 +227,9 @@ h2{
     background: #fff;
     border-radius: 12px;
 }
+.pb-1{
+    padding-bottom: .8rem;
+}
 .about-box{
     justify-content: space-around;
     gap: 1rem;
@@ -238,45 +245,17 @@ h2{
     border-radius: 12px;
     background-color: #F8F8F8;
 }
-.about-box .about-item p{
-   
-    padding-bottom: .7rem;
-}
 .about-box .education span{
     display: inline-block;
     color: var(--subfont-color);
     margin-bottom: .5rem;
 }
-.phone:before{
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(/assets/images/me.png) no-repeat center;
-    background-size: contain;
-    vertical-align: middle;
+.deco-icon{
+    width: 2rem;
+    height: 2rem;
     margin-right: .4rem;
 }
-.email:before{
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(/assets/images/email_svgrepo.com.png) no-repeat center;
-    background-size: cover;
-    vertical-align: middle;
-    margin-right: .4rem;
-}
-.study-title::before{
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(/assets/images/email_svgrepo.com.png) no-repeat center;
-    background-size: cover;
-    vertical-align: middle;
-    margin-right: .4rem;
-}
+
 .study-list span{
     display:block;
     padding-bottom: .7rem;
@@ -308,9 +287,11 @@ h3{
 }
 .contact-item{
     flex: 1;
+    justify-content: center;
+    width: 100%;
     text-align: center;
     background: #F8F8F8;
-    padding: 7rem 5rem;
+    padding: 7rem 0;
     border-radius: 12px;
 }
 footer{
@@ -327,10 +308,10 @@ footer{
     font-weight: 900;
     color: #fff;
     opacity: .4;
-    line-height: 14rem;
+    line-height: 10rem;
 }
 .copy{
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     font-size: 1.4rem;
     color: #F8F8F8;
     opacity: .6;
@@ -425,7 +406,16 @@ h4{
 }
 @media (max-width:768px) {
     .inner{
-        padding:0 30px;
+        padding:0 2rem;
+    }
+    .main-bg{
+        background-position-x: left;
+    }
+    .menu li {
+        margin: 0 1.3rem;
+    }
+    .menu li a{
+        font-size: 1.4rem;
     }
     .main-text p{
         font-size: 2.4rem;
@@ -433,9 +423,12 @@ h4{
     .main-text p .deco{
         font-size: 3rem;
     }
-     .thank{
-        font-size: 6rem;
-        line-height: 5rem;
+    .about-box {
+        padding: 3rem 3.4rem 0 3.4rem;
+    }
+    .thank{
+        font-size: 5rem;
+        line-height: 4rem;
     }
     .w-grid{
         grid-template-columns: 1fr;
@@ -443,5 +436,14 @@ h4{
     .work-detail {
         padding-left: 0;
         padding-top: 3rem;
+    }
+    .contact-box{
+        flex-direction: column;
+    }
+    .skill-icon{
+        flex-wrap: wrap;
+    }
+    .skill-icon li{
+        width: 25%;
     }
 }
